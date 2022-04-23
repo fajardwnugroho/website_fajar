@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:distill="https://distill.pub/journal/" version="2.0">
+  <channel>
+    <title>fajardwnugroho</title>
+    <link>https://fajardwnugroho.netlify.app/</link>
+    <atom:link href="https://fajardwnugroho.netlify.app/journal.xml" rel="self" type="application/rss+xml"/>
+    <description>Fajar Dwi Nugroho's blog
+</description>
+    <image>
+      <title>fajardwnugroho</title>
+      <url>https://fajardwnugroho.netlify.app/favicon.ico</url>
+      <link>https://fajardwnugroho.netlify.app/</link>
+    </image>
+    <generator>Distill</generator>
+    <lastBuildDate>Sun, 09 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Wicked Salmon</title>
+      <dc:creator>Fajar Nugroho</dc:creator>
+      <link>https://fajardwnugroho.netlify.app/posts/2021-07-26-wicked-salmon</link>
+      <description>Decreasing of salmon population in wild habitat are cause by over fishing and developed on the river stream such as a dam. Because salmons are Anadromous they are swiming against the river flow from the ocean and back to the freshwater for spawning.</description>
+      <category>R</category>
+      <category>Data Analysis</category>
+      <category>Fisheries</category>
+      <guid>https://fajardwnugroho.netlify.app/posts/2021-07-26-wicked-salmon</guid>
+      <pubDate>Sun, 09 Jan 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://fajardwnugroho.netlify.app/posts/2021-07-26-wicked-salmon/images/marcos-paulo-prado-B1ZnmSB7htg-unsplash.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Wicked Tuna</title>
+      <dc:creator>Fajar Nugroho</dc:creator>
+      <link>https://fajardwnugroho.netlify.app/posts/2021-08-02-wicked-tuna</link>
+      <description>Atlantic Bluefin Tuna now is endangered because overexploited, I want to find out current condition.</description>
+      <category>R</category>
+      <category>Data Analysis</category>
+      <category>Fisheries</category>
+      <guid>https://fajardwnugroho.netlify.app/posts/2021-08-02-wicked-tuna</guid>
+      <pubDate>Sun, 02 Jan 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://fajardwnugroho.netlify.app/posts/2021-08-02-wicked-tuna/images/kate-BRnnJ6vVNdY-unsplash.jpg" medium="image" type="image/jpeg"/>
+    </item>
+  </channel>
+</rss>

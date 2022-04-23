@@ -1,0 +1,56 @@
+---
+title: "Henlo World"
+description: "Rstudio Addicted, Python Fansboy and Shiny Developer"
+---
+
+Henlo! My name is Fajar Nugroho, thanks for visiting my site. I currently work as a Product Marketing Analyst at Rakamin Academy a Start Up Education Technology based in Jakarta, Indonesia. I enjoy using R & Python since I learn Data Science. <br>
+Previously, I completed my Bachelor of Fisheries Science at [Universitas Gadjah Mada](https://www.ugm.ac.id/) in August 2018. I enjoy writing about things I'm working on and try to share some interesting things I discover on my blog.
+
+Feel free to get in touch if any of the posts catch your interest!
+
+### Shiny Developer
+
+Need a dashboard for your business? <br> 
+I recommend develop it with Shiny Apps, because I can develop it for you !
+
+[Thunnus Catching](https://fajardwnugroho.shinyapps.io/Thunnus_Catching/) <br>
+[Sales Dashboard](https://fajardwnugroho.shinyapps.io/Sales_Dashboard/) <br>
+[Sales Prediction](https://fajardwnugroho.shinyapps.io/Sales_Prediction/)
+
+### Rpubs
+
+Yes, yes, yes !! you can reach me on [Rpubs](https://rpubs.com/fajardwnugroho/) too !
+
+### Tech Stack
+<!-- Add font awesome icons --> 
+
+<div class="mylinks">
+<p style="text-align: center;">
+    <a href="https://cran.r-project.org/" target="_blank" class="fab fa-r-project" style="font-size:36px;"></a>
+    <a href="https://www.python.org/" target="_blank" class="fab fa-python" style="font-size:36px;"></a>
+    <a href="https://www.javascript.com/" target="_blank" class="fab fa-js-square" style="font-size:36px;"></a>
+    <a href="https://reactjs.org/" target="_blank" class="fab fa-react" style="font-size:36px;"></a>
+    <a href="https://github.com/" target="_blank" class="fab fa-github" style="font-size:36px;"></a>
+    <a href="https://www.docker.com/" target="_blank" class="fab fa-docker" style="font-size:36px;"></a>
+    <a href="https://aws.amazon.com/id/" target="_blank" class="fab fa-aws" style="font-size:36px;"></a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML?retiredLocale=id" target="_blank" class="fab fa-html5" style="font-size:36px;"></a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS?retiredLocale=id" target="_blank" class="fab fa-css3-alt" style="font-size:36px;"></a>
+    <a href="https://sass-lang.com/" target="_blank" class="fab fa-sass" style="font-size:36px;"></a>
+    <a href="https://www.mysql.com/" target="_blank" class="fas fa-database" style="font-size:36px;"></a>
+</p>
+</div>
+
+### Learn R now ! Trust me, its good for you
+
+### Contact
+<!-- Add font awesome icons --> 
+
+<div class="mylinks">
+<p style="text-align: center;">
+    <a href="https://t.me/fajardwnugroho" target="_blank" class="fab fa-telegram"  style="font-size:36px;"></a>
+    <a href="mailto:fajardwnugroho@gmail.com" target="_blank" class="fa fa-envelope" style="font-size:36px;"></a>
+    <a href="https://www.linkedin.com/in/fajardwnugroho/" target="_blank" class="fa fa-linkedin-square" style="font-size:36px;"></a>
+    <!-- <a href="https://twitter.com/harryfishr" target="_blank" class="fa fa-twitter" style="font-size:36px;"></a> -->
+</p>
+</div>
+

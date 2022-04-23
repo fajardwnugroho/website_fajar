@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+
+  <!--radix_placeholder_meta_tags-->
+  <title>Wicked Salmon</title>
+
+  <meta property="description" itemprop="description" content="Decreasing of salmon population in wild habitat are cause by over fishing and developed on the river stream such as a dam. Because salmons are Anadromous they are swiming against the river flow from the ocean and back to the freshwater for spawning."/>
+
+
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2022-01-09"/>
+  <meta property="article:created" itemprop="dateCreated" content="2022-01-09"/>
+  <meta name="article:author" content="Fajar Nugroho"/>
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="Wicked Salmon"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Decreasing of salmon population in wild habitat are cause by over fishing and developed on the river stream such as a dam. Because salmons are Anadromous they are swiming against the river flow from the ocean and back to the freshwater for spawning."/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="Wicked Salmon"/>
+  <meta property="twitter:description" content="Decreasing of salmon population in wild habitat are cause by over fishing and developed on the river stream such as a dam. Because salmons are Anadromous they are swiming against the river flow from the ocean and back to the freshwater for spawning."/>
+
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","preview","draft","editor_options"]}},"value":[{"type":"character","attributes":{},"value":["Wicked Salmon"]},{"type":"character","attributes":{},"value":["Decreasing of salmon population in wild habitat are cause by over fishing and developed on the river stream such as a dam. Because salmons are Anadromous they are swiming against the river flow from the ocean and back to the freshwater for spawning. \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Fajar Nugroho"]},{"type":"character","attributes":{},"value":["https://fajardwnugroho.com/"]}]}]},{"type":"character","attributes":{},"value":["01-09-2022"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_float","collapsed","smooth_scroll","self_contained","toc_depth","css"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]},{"type":"integer","attributes":{},"value":[2]},{"type":"character","attributes":{},"value":["style.css"]}]}]},{"type":"character","attributes":{},"value":["R","Data Analysis","Fisheries"]},{"type":"character","attributes":{},"value":["images/marcos-paulo-prado-B1ZnmSB7htg-unsplash.jpg"]},{"type":"logical","attributes":{},"value":[false]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["chunk_output_type"]}},"value":[{"type":"character","attributes":{},"value":["console"]}]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["images/marcos-paulo-prado-B1ZnmSB7htg-unsplash.jpg","input_fish/CL_FI_COUNTRY_GROUPS.csv","input_fish/CL_FI_PRODUCTION_SOURCE.csv","input_fish/CL_FI_SPECIES_GROUPS.csv","input_fish/CL_FI_SYMBOL.csv","input_fish/CL_FI_UNIT.csv","input_fish/CL_FI_WATERAREA_GROUPS.csv","input_fish/CL_History.txt","input_fish/DSD_FI_PRODUCTION.xlsx","input_fish/FIproduction_E.html","input_fish/ISSCAAP.pdf","input_fish/Notes.txt","input_fish/Red_List.jpg","input_fish/RedList.png","input_fish/TS_FI_PRODUCTION.csv","Wicked-Salmon_files/anchor-4.2.2/anchor.min.js","Wicked-Salmon_files/bowser-1.9.3/bowser.min.js","Wicked-Salmon_files/distill-2.2.21/template.v2.js","Wicked-Salmon_files/figure-html5/unnamed-chunk-18-1.png","Wicked-Salmon_files/figure-html5/unnamed-chunk-29-1.png","Wicked-Salmon_files/header-attrs-2.11/header-attrs.js","Wicked-Salmon_files/jquery-3.6.0/jquery-3.6.0.js","Wicked-Salmon_files/jquery-3.6.0/jquery-3.6.0.min.js","Wicked-Salmon_files/jquery-3.6.0/jquery-3.6.0.min.map","Wicked-Salmon_files/popper-2.6.0/popper.min.js","Wicked-Salmon_files/tippy-6.2.7/tippy-bundle.umd.min.js","Wicked-Salmon_files/tippy-6.2.7/tippy-light-border.css","Wicked-Salmon_files/tippy-6.2.7/tippy.css","Wicked-Salmon_files/tippy-6.2.7/tippy.umd.min.js","Wicked-Salmon_files/webcomponents-2.0.0/webcomponents.js"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .d-contents li {
+    list-style-type: none
+  }
+
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+
+  .d-contents ul {
+    padding-left: 1em
+  }
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure img {
+    width: 100%;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          return "<p>" + $('#ref-' + ref).html() + "</p>";
+        }).join("\n");
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-contents').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <!--/radix_placeholder_distill-->
+  <script src="Wicked-Salmon_files/header-attrs-2.11/header-attrs.js"></script>
+  <script src="Wicked-Salmon_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="Wicked-Salmon_files/popper-2.6.0/popper.min.js"></script>
+  <link href="Wicked-Salmon_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="Wicked-Salmon_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="Wicked-Salmon_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="Wicked-Salmon_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="Wicked-Salmon_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="Wicked-Salmon_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="Wicked-Salmon_files/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+  <link rel="stylesheet" href="style.css" type="text/css"/>
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Wicked Salmon","description":"Decreasing of salmon population in wild habitat are cause by over fishing and developed on the river stream such as a dam. Because salmons are Anadromous they are swiming against the river flow from the ocean and back to the freshwater for spawning.","authors":[{"author":"Fajar Nugroho","authorURL":"https://fajardwnugroho.com/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-01-09T00:00:00.000+07:00","citationText":"Nugroho, 2022"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Wicked Salmon</h1>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+<div class="dt=tag">R</div>
+<div class="dt=tag">Data Analysis</div>
+<div class="dt=tag">Fisheries</div>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>Decreasing of salmon population in wild habitat are cause by over fishing and developed on the river stream such as a dam. Because salmons are Anadromous they are swiming against the river flow from the ocean and back to the freshwater for spawning.</p></p>
+</div>
+
+<div class="d-byline">
+  Fajar Nugroho <a href="https://fajardwnugroho.com/" class="uri">https://fajardwnugroho.com/</a> 
+  
+<br/>01-09-2022
+</div>
+
+<div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#intro">1. Intro</a>
+<ul>
+<li><a href="#greetings">1.1 Greetings</a></li>
+<li><a href="#brief">1.2 Brief</a></li>
+<li><a href="#problem-background">1.3 Problem Background</a></li>
+<li><a href="#library">1.4 Library</a></li>
+<li><a href="#dataset">1.5 Dataset</a></li>
+</ul></li>
+<li><a href="#data-preparation">2. Data Preparation</a>
+<ul>
+<li><a href="#subset-columns-rows">2.1 Subset Columns &amp; Rows</a></li>
+<li><a href="#check-the-data">2.2 Check the Data</a></li>
+<li><a href="#convert-data">2.3 Convert Data</a></li>
+</ul></li>
+<li><a href="#data-exploratory-and-explanatory">3 Data Exploratory and Explanatory</a>
+<ul>
+<li><a href="#most-popular-species">3.1 Most popular species</a></li>
+<li><a href="#where-they-came-from">3.2 Where they came from</a></li>
+<li><a href="#aquaculture">3.3 Aquaculture</a></li>
+<li><a href="#country-and-cultivation">3.4 Country and cultivation</a></li>
+</ul></li>
+<li><a href="#conclusion">4. Conclusion</a></li>
+<li><a href="#reference">5. Reference</a></li>
+</ul>
+</nav>
+</div>
+<h1 class="tabset" id="intro">1. Intro</h1>
+<h2 class="tabset" id="greetings">1.1 Greetings</h2>
+<p>Helo, Welcome to My Rmd In this Rmd I would explore a little bit about salmon.</p>
+<h2 class="tabset" id="brief">1.2 Brief</h2>
+<p>Data source is from FAO. There are a lot of species, however Im only need a commercial salmon species. I wont to know about the source, which country? and what the metodologi used to harvest salmon?</p>
+<h2 class="tabset" id="problem-background">1.3 Problem Background</h2>
+<p>Decreasing of salmon population in wild habitat are cause by over fishing and developed on the river stream such as a dam. Because salmons are Anadromous they are swiming against the river flow from the ocean and back to the freshwater for spawning.</p>
+<h2 class="tabset" id="library">1.4 Library</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://readr.tidyverse.org'>readr</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://readxl.tidyverse.org'>readxl</a></span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h2 class="tabset" id="dataset">1.5 Dataset</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>fish</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"input_fish/TS_FI_PRODUCTION.csv"</span><span class='op'>)</span>
+<span class='va'>species</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"input_fish/CL_FI_SPECIES_GROUPS.csv"</span><span class='op'>)</span>
+<span class='va'>country</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"input_fish/CL_FI_COUNTRY_GROUPS.csv"</span><span class='op'>)</span>
+<span class='va'>source</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"input_fish/CL_FI_PRODUCTION_SOURCE.csv"</span><span class='op'>)</span>
+<span class='va'>note</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readxl.tidyverse.org/reference/read_excel.html'>read_xlsx</a></span><span class='op'>(</span><span class='st'>"input_fish/DSD_FI_PRODUCTION.xlsx"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h1 id="data-preparation">2. Data Preparation</h1>
+<h2 id="subset-columns-rows">2.1 Subset Columns &amp; Rows</h2>
+<p>I only chose 7 species of salmon and for column I chose Country, Source, Species, Year, and Quantity</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>salmon</span> <span class='op'>&lt;-</span> <span class='va'>fish</span><span class='op'>[</span> <span class='va'>fish</span><span class='op'>$</span><span class='va'>SPECIES</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"SAL"</span>, <span class='st'>"CHI"</span>, <span class='st'>"CHU"</span>, <span class='st'>"COH"</span>, <span class='st'>"CHE"</span>, <span class='st'>"PIN"</span>, <span class='st'>"SOC"</span><span class='op'>)</span> , 
+                                  <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"COUNTRY"</span>, <span class='st'>"SOURCE"</span>, <span class='st'>"SPECIES"</span>, <span class='st'>"YEAR"</span>, <span class='st'>"QUANTITY"</span><span class='op'>)</span><span class='op'>]</span>
+</code></pre>
+</div>
+</div>
+<p>and then assign to the salmon data frame</p>
+<h2 id="check-the-data">2.2 Check the Data</h2>
+<h3 id="check-structure-data">2.2.1 Check structure data</h3>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='va'>salmon</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>tibble [6,724 × 5] (S3: tbl_df/tbl/data.frame)
+ $ COUNTRY : chr [1:6724] &quot;643&quot; &quot;643&quot; &quot;643&quot; &quot;643&quot; ...
+ $ SOURCE  : num [1:6724] 4 4 4 4 4 4 4 4 4 4 ...
+ $ SPECIES : chr [1:6724] &quot;SAL&quot; &quot;CHE&quot; &quot;CHE&quot; &quot;CHE&quot; ...
+ $ YEAR    : num [1:6724] 1988 1995 1994 1993 1992 ...
+ $ QUANTITY: num [1:6724] 89 4 4 0 0 0 0 0 0 381 ...</code></pre>
+</div>
+<h3 id="cek-missing-data">2.2.2 Cek Missing data</h3>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>colSums</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>salmon</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code> COUNTRY   SOURCE  SPECIES     YEAR QUANTITY 
+       0        0        0        0        0 </code></pre>
+</div>
+<p>There is no missing data in salmon data frame</p>
+<h2 id="convert-data">2.3 Convert Data</h2>
+<h3 id="convert-country-code-to-country-name">2.3.1 Convert country code to country name</h3>
+<p>Check country code</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span><span class='op'>(</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code> [1] &quot;643&quot; &quot;410&quot; &quot;666&quot; &quot;840&quot; &quot;724&quot; &quot;810&quot; &quot;752&quot; &quot;124&quot; &quot;152&quot; &quot;208&quot; &quot;233&quot;
+[12] &quot;234&quot; &quot;250&quot; &quot;246&quot; &quot;276&quot; &quot;304&quot; &quot;352&quot; &quot;372&quot; &quot;833&quot; &quot;392&quot; &quot;428&quot; &quot;440&quot;
+[23] &quot;528&quot; &quot;554&quot; &quot;578&quot; &quot;616&quot; &quot;620&quot; &quot;826&quot; &quot;300&quot; &quot;408&quot; &quot;196&quot; &quot;036&quot; &quot;792&quot;
+[34] &quot;376&quot; &quot;100&quot;</code></pre>
+</div>
+<p>Interpret county code</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>negara</span> <span class='op'>&lt;-</span> <span class='va'>country</span> <span class='op'>[</span> <span class='va'>country</span><span class='op'>$</span><span class='va'>UN_Code</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"643"</span>, <span class='st'>"410"</span>, <span class='st'>"666"</span>, <span class='st'>"840"</span>, <span class='st'>"724"</span>, 
+                                           <span class='st'>"810"</span>, <span class='st'>"752"</span>, <span class='st'>"124"</span>, <span class='st'>"152"</span>, <span class='st'>"208"</span>, 
+                                           <span class='st'>"233"</span>, <span class='st'>"234"</span>, <span class='st'>"250"</span>, <span class='st'>"246"</span>, <span class='st'>"276"</span>, 
+                                           <span class='st'>"304"</span>, <span class='st'>"352"</span>, <span class='st'>"372"</span>, <span class='st'>"833"</span>, <span class='st'>"392"</span>, 
+                                           <span class='st'>"428"</span>, <span class='st'>"440"</span>, <span class='st'>"528"</span>, <span class='st'>"554"</span>, <span class='st'>"578"</span>, 
+                                           <span class='st'>"616"</span>, <span class='st'>"620"</span>, <span class='st'>"826"</span>, <span class='st'>"300"</span>, <span class='st'>"408"</span>, 
+                                           <span class='st'>"196"</span>,  <span class='st'>"36"</span>, <span class='st'>"792"</span>, <span class='st'>"376"</span>, <span class='st'>"100"</span><span class='op'>)</span> , <span class='op'>]</span>
+<span class='va'>negara</span><span class='op'>$</span><span class='va'>Name_En</span>
+</code></pre>
+</div>
+<pre><code> [1] &quot;Bulgaria&quot;                 &quot;Canada&quot;                  
+ [3] &quot;Chile&quot;                    &quot;Cyprus&quot;                  
+ [5] &quot;Denmark&quot;                  &quot;Estonia&quot;                 
+ [7] &quot;Faroe Islands&quot;            &quot;Finland&quot;                 
+ [9] &quot;France&quot;                   &quot;Germany&quot;                 
+[11] &quot;Greece&quot;                   &quot;Greenland&quot;               
+[13] &quot;Iceland&quot;                  &quot;Ireland&quot;                 
+[15] &quot;Israel&quot;                   &quot;Japan&quot;                   
+[17] &quot;Korea, Dem. People&#39;s Rep&quot; &quot;Korea, Republic of&quot;      
+[19] &quot;Latvia&quot;                   &quot;Lithuania&quot;               
+[21] &quot;Netherlands&quot;              &quot;New Zealand&quot;             
+[23] &quot;Norway&quot;                   &quot;Poland&quot;                  
+[25] &quot;Portugal&quot;                 &quot;Russian Federation&quot;      
+[27] &quot;St. Pierre and Miquelon&quot;  &quot;Spain&quot;                   
+[29] &quot;Sweden&quot;                   &quot;Turkey&quot;                  
+[31] &quot;Un. Sov. Soc. Rep.&quot;       &quot;United Kingdom&quot;          
+[33] &quot;Isle of Man&quot;              &quot;United States of America&quot;</code></pre>
+</div>
+<p>There are 34 countries in salmon data frame, however according to the FAO there are only 14 countries that contribute to the global salmon trade, So I just convert 14 countries to the salmon data frame.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>==</span><span class='st'>"578"</span><span class='op'>]</span><span class='op'>&lt;-</span><span class='st'>"Norway"</span>
+<span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>==</span><span class='st'>"152"</span><span class='op'>]</span><span class='op'>&lt;-</span><span class='st'>"Chile"</span>
+<span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>==</span><span class='st'>"752"</span><span class='op'>]</span><span class='op'>&lt;-</span><span class='st'>"Sweden"</span>
+<span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>==</span><span class='st'>"208"</span><span class='op'>]</span><span class='op'>&lt;-</span><span class='st'>"Denmark"</span>
+<span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>==</span><span class='st'>"616"</span><span class='op'>]</span><span class='op'>&lt;-</span><span class='st'>"Poland"</span>
+<span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>==</span><span class='st'>"826"</span><span class='op'>]</span><span class='op'>&lt;-</span><span class='st'>"United Kingdom"</span>
+<span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>==</span><span class='st'>"840"</span><span class='op'>]</span><span class='op'>&lt;-</span><span class='st'>"United States of America"</span>
+<span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>==</span><span class='st'>"124"</span><span class='op'>]</span><span class='op'>&lt;-</span><span class='st'>"Canada"</span>
+<span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>==</span><span class='st'>"250"</span><span class='op'>]</span><span class='op'>&lt;-</span><span class='st'>"France"</span>
+<span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>==</span><span class='st'>"276"</span><span class='op'>]</span><span class='op'>&lt;-</span><span class='st'>"Germany"</span>
+<span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>==</span><span class='st'>"528"</span><span class='op'>]</span><span class='op'>&lt;-</span><span class='st'>"Netherlands"</span>
+<span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>==</span><span class='st'>"392"</span><span class='op'>]</span><span class='op'>&lt;-</span><span class='st'>"Japan"</span>
+<span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>==</span><span class='st'>"724"</span><span class='op'>]</span><span class='op'>&lt;-</span><span class='st'>"Spain"</span>
+<span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>==</span><span class='st'>"643"</span><span class='op'>]</span><span class='op'>&lt;-</span><span class='st'>"Russian Federation"</span>
+
+
+<span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span><span class='op'>(</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code> [1] &quot;Russian Federation&quot;       &quot;410&quot;                     
+ [3] &quot;666&quot;                      &quot;United States of America&quot;
+ [5] &quot;Spain&quot;                    &quot;810&quot;                     
+ [7] &quot;Sweden&quot;                   &quot;Canada&quot;                  
+ [9] &quot;Chile&quot;                    &quot;Denmark&quot;                 
+[11] &quot;233&quot;                      &quot;234&quot;                     
+[13] &quot;France&quot;                   &quot;246&quot;                     
+[15] &quot;Germany&quot;                  &quot;304&quot;                     
+[17] &quot;352&quot;                      &quot;372&quot;                     
+[19] &quot;833&quot;                      &quot;Japan&quot;                   
+[21] &quot;428&quot;                      &quot;440&quot;                     
+[23] &quot;Netherlands&quot;              &quot;554&quot;                     
+[25] &quot;Norway&quot;                   &quot;Poland&quot;                  
+[27] &quot;620&quot;                      &quot;United Kingdom&quot;          
+[29] &quot;300&quot;                      &quot;408&quot;                     
+[31] &quot;196&quot;                      &quot;036&quot;                     
+[33] &quot;792&quot;                      &quot;376&quot;                     
+[35] &quot;100&quot;                     </code></pre>
+</div>
+<p>Subset 14 countires</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>salmon</span> <span class='op'>&lt;-</span> <span class='va'>salmon</span><span class='op'>[</span> <span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Norway"</span>, <span class='st'>"Chile"</span>, <span class='st'>"Sweden"</span>, <span class='st'>"Denmark"</span>, <span class='st'>"Poland"</span>, 
+                                        <span class='st'>"United Kingdom"</span>, <span class='st'>"United States of America"</span>, <span class='st'>"Canada"</span>, 
+                                        <span class='st'>"France"</span>, <span class='st'>"Germany"</span>, <span class='st'>"Netherlands"</span>, <span class='st'>"Japan"</span>, <span class='st'>"Spain"</span>, 
+                                        <span class='st'>"Russian Federation"</span><span class='op'>)</span> , <span class='op'>]</span>
+
+<span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span><span class='op'>(</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code> [1] &quot;Russian Federation&quot;       &quot;United States of America&quot;
+ [3] &quot;Spain&quot;                    &quot;Sweden&quot;                  
+ [5] &quot;Canada&quot;                   &quot;Chile&quot;                   
+ [7] &quot;Denmark&quot;                  &quot;France&quot;                  
+ [9] &quot;Germany&quot;                  &quot;Japan&quot;                   
+[11] &quot;Netherlands&quot;              &quot;Norway&quot;                  
+[13] &quot;Poland&quot;                   &quot;United Kingdom&quot;          </code></pre>
+</div>
+<h3 id="convert-code-of-source-to-source-name">2.3.2 Convert code of source to source name</h3>
+<p>Interpret code of source</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>source</span>
+</code></pre>
+</div>
+<pre><code># A tibble: 5 × 5
+  Identifier Code          Name_En        Name_Fr        Name_Es      
+       &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;          &lt;chr&gt;          &lt;chr&gt;        
+1          5 AQUACULTURE   Aquaculture p… Production de… Producción d…
+2          1 FRESHWATER    Aquaculture p… Production de… Producción d…
+3          2 BRACKISHWATER Aquaculture p… Production de… Producción d…
+4          3 MARINE        Aquaculture p… Production de… Producción d…
+5          4 CAPTURE       Capture produ… Captures       Capturas     </code></pre>
+</div>
+<p>Check code of source on salmon data frame</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span><span class='op'>(</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>SOURCE</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[1] 4 1 3</code></pre>
+</div>
+<p>There are only 3 of 5 source in the salmon data frame So now convert the code to the name</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>salmon</span><span class='op'>$</span><span class='va'>SOURCE</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>SOURCE</span><span class='op'>==</span><span class='st'>"1"</span><span class='op'>]</span><span class='op'>&lt;-</span><span class='st'>"Freshwater Aquaculture"</span>
+<span class='va'>salmon</span><span class='op'>$</span><span class='va'>SOURCE</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>SOURCE</span><span class='op'>==</span><span class='st'>"3"</span><span class='op'>]</span><span class='op'>&lt;-</span><span class='st'>"Marine Aquaculture"</span>
+<span class='va'>salmon</span><span class='op'>$</span><span class='va'>SOURCE</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>SOURCE</span><span class='op'>==</span><span class='st'>"4"</span><span class='op'>]</span><span class='op'>&lt;-</span><span class='st'>"Capture Fishery"</span>
+
+<span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span><span class='op'>(</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>SOURCE</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[1] &quot;Capture Fishery&quot;        &quot;Freshwater Aquaculture&quot;
+[3] &quot;Marine Aquaculture&quot;    </code></pre>
+</div>
+<h3 id="convert-species-code-to-species-name-in-english">2.3.3 Convert species code to species name in english</h3>
+<p>Interpret species code</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>Spesies</span> <span class='op'>&lt;-</span> <span class='va'>species</span><span class='op'>[</span> <span class='va'>species</span><span class='op'>$</span><span class='st'>"3Alpha_Code"</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"SAL"</span>, <span class='st'>"CHI"</span>, <span class='st'>"CHU"</span>, <span class='st'>"COH"</span>, <span class='st'>"CHE"</span>, <span class='st'>"PIN"</span>, <span class='st'>"SOC"</span><span class='op'>)</span> , <span class='op'>]</span>
+</code></pre>
+</div>
+</div>
+<p>convert the code to spacies name</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>salmon</span><span class='op'>$</span><span class='va'>SPECIES</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>SPECIES</span><span class='op'>==</span><span class='st'>"SAL"</span><span class='op'>]</span><span class='op'>&lt;-</span><span class='st'>"Atlantic Salmon"</span>
+<span class='va'>salmon</span><span class='op'>$</span><span class='va'>SPECIES</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>SPECIES</span><span class='op'>==</span><span class='st'>"PIN"</span><span class='op'>]</span><span class='op'>&lt;-</span><span class='st'>"Humpback Salmon"</span>
+<span class='va'>salmon</span><span class='op'>$</span><span class='va'>SPECIES</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>SPECIES</span><span class='op'>==</span><span class='st'>"CHU"</span><span class='op'>]</span><span class='op'>&lt;-</span><span class='st'>"Keta Salmon"</span>
+<span class='va'>salmon</span><span class='op'>$</span><span class='va'>SPECIES</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>SPECIES</span><span class='op'>==</span><span class='st'>"CHE"</span><span class='op'>]</span><span class='op'>&lt;-</span><span class='st'>"Cherry Salmon"</span>
+<span class='va'>salmon</span><span class='op'>$</span><span class='va'>SPECIES</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>SPECIES</span><span class='op'>==</span><span class='st'>"SOC"</span><span class='op'>]</span><span class='op'>&lt;-</span><span class='st'>"Red Salmon"</span>
+<span class='va'>salmon</span><span class='op'>$</span><span class='va'>SPECIES</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>SPECIES</span><span class='op'>==</span><span class='st'>"CHI"</span><span class='op'>]</span><span class='op'>&lt;-</span><span class='st'>"King Salmon"</span>
+<span class='va'>salmon</span><span class='op'>$</span><span class='va'>SPECIES</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>SPECIES</span><span class='op'>==</span><span class='st'>"COH"</span><span class='op'>]</span><span class='op'>&lt;-</span><span class='st'>"Silver Salmon"</span>
+
+<span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span><span class='op'>(</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>SPECIES</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[1] &quot;Atlantic Salmon&quot; &quot;Cherry Salmon&quot;   &quot;Red Salmon&quot;     
+[4] &quot;King Salmon&quot;     &quot;Silver Salmon&quot;   &quot;Keta Salmon&quot;    
+[7] &quot;Humpback Salmon&quot;</code></pre>
+</div>
+<h3 id="character-to-factor">2.3.4 Character to factor</h3>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>)</span>
+<span class='va'>salmon</span><span class='op'>$</span><span class='va'>SOURCE</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>SOURCE</span><span class='op'>)</span>
+<span class='va'>salmon</span><span class='op'>$</span><span class='va'>SPECIES</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>SPECIES</span><span class='op'>)</span>
+<span class='va'>salmon</span><span class='op'>$</span><span class='va'>YEAR</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>YEAR</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>Im just need year at 2018 so, i subset it</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>salmon</span> <span class='op'>&lt;-</span> <span class='va'>salmon</span><span class='op'>[</span> <span class='va'>salmon</span><span class='op'>$</span><span class='va'>YEAR</span> <span class='op'>==</span> <span class='fl'>2018</span>, <span class='op'>]</span>
+<span class='va'>salmon</span> <span class='op'>&lt;-</span> <span class='va'>salmon</span><span class='op'>[</span> , <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"COUNTRY"</span>, <span class='st'>"SOURCE"</span>, <span class='st'>"SPECIES"</span>, <span class='st'>"QUANTITY"</span><span class='op'>)</span><span class='op'>]</span>
+</code></pre>
+</div>
+</div>
+<p>Now the data is ready to explore</p>
+<h1 id="data-exploratory-and-explanatory">3 Data Exploratory and Explanatory</h1>
+<h2 id="most-popular-species">3.1 Most popular species</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>salmon_species</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/proportions.html'>prop.table</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/droplevels.html'>droplevels</a></span><span class='op'>(</span><span class='va'>salmon</span><span class='op'>[</span> , <span class='st'>"SPECIES"</span> <span class='op'>]</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>, 
+                                     decreasing <span class='op'>=</span> <span class='cn'>T</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>salmon_species</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"Salmon Species"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>salmon_species</span>, <span class='fl'>3</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>   Salmon Species      Freq
+1 Atlantic Salmon 0.4393939
+2 Humpback Salmon 0.1212121
+3   Silver Salmon 0.1212121</code></pre>
+</div>
+<p>Ok this is the top 3 of the most popular salmon</p>
+<p>I try to make a pie chart</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>graphics</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/r/graphics/pie.html'>pie</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/xtabs.html'>xtabs</a></span><span class='op'>(</span><span class='op'>~</span> <span class='va'>SPECIES</span>, <span class='va'>salmon</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="Wicked-Salmon_files/figure-html5/unnamed-chunk-18-1.png" width="624" /></p>
+</div>
+<h2 id="where-they-came-from">3.2 Where they came from</h2>
+<p>First, Atlantic Salmon</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>Atlantic_Salmon_Source</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/proportions.html'>prop.table</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/droplevels.html'>droplevels</a></span><span class='op'>(</span><span class='va'>salmon</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>SPECIES</span> <span class='op'>==</span> <span class='st'>"Atlantic Salmon"</span>,<span class='st'>"SOURCE"</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>,decreasing <span class='op'>=</span> <span class='cn'>T</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>Atlantic_Salmon_Source</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"Atlantic Salmon"</span><span class='op'>)</span>
+<span class='va'>Atlantic_Salmon_Source</span>
+</code></pre>
+</div>
+<pre><code>         Atlantic Salmon      Freq
+1        Capture Fishery 0.6206897
+2     Marine Aquaculture 0.2758621
+3 Freshwater Aquaculture 0.1034483</code></pre>
+</div>
+<p>So capture fisheries practice is still being carried out, even though this species is already under threat</p>
+<p>Second, Humpback Salmon</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>Humpback_Salmon_Source</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/proportions.html'>prop.table</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/droplevels.html'>droplevels</a></span><span class='op'>(</span><span class='va'>salmon</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>SPECIES</span> <span class='op'>==</span> <span class='st'>"Humpback Salmon"</span>,<span class='st'>"SOURCE"</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>,decreasing <span class='op'>=</span> <span class='cn'>T</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>Humpback_Salmon_Source</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"Humpback Salmon"</span><span class='op'>)</span>
+<span class='va'>Humpback_Salmon_Source</span>
+</code></pre>
+</div>
+<pre><code>     Humpback Salmon  Freq
+1    Capture Fishery 0.875
+2 Marine Aquaculture 0.125</code></pre>
+</div>
+<p>Third, Silver Salmon</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>Silver_Salmon_Source</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/proportions.html'>prop.table</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/droplevels.html'>droplevels</a></span><span class='op'>(</span><span class='va'>salmon</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>SPECIES</span> <span class='op'>==</span> <span class='st'>"Silver Salmon"</span>,<span class='st'>"SOURCE"</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>,decreasing <span class='op'>=</span> <span class='cn'>T</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>Silver_Salmon_Source</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"Silver  Salmon"</span><span class='op'>)</span>
+<span class='va'>Silver_Salmon_Source</span>
+</code></pre>
+</div>
+<pre><code>          Silver  Salmon  Freq
+1        Capture Fishery 0.625
+2     Marine Aquaculture 0.250
+3 Freshwater Aquaculture 0.125</code></pre>
+</div>
+<p>From three species above, the conclusion is capture fisheries still dominate the output of production.</p>
+<h2 id="aquaculture">3.3 Aquaculture</h2>
+<p>I am curious, what species are cultivated? Start from Freshwater Aquaculture</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>Freshwater_Aquaculture</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/droplevels.html'>droplevels</a></span><span class='op'>(</span><span class='va'>salmon</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>SOURCE</span> <span class='op'>==</span> <span class='st'>"Freshwater Aquaculture"</span>,
+                                                                     <span class='st'>"SPECIES"</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>,decreasing <span class='op'>=</span> <span class='cn'>T</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>Freshwater_Aquaculture</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"Freshwater Aquaculture"</span><span class='op'>)</span>
+<span class='va'>Freshwater_Aquaculture</span>
+</code></pre>
+</div>
+<pre><code>  Freshwater Aquaculture Freq
+1            Keta Salmon    1
+2          Silver Salmon    1
+3        Atlantic Salmon    3</code></pre>
+</div>
+<p>Ok now from Marine Aquaculture</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>Marine_Aquaculture</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/droplevels.html'>droplevels</a></span><span class='op'>(</span><span class='va'>salmon</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>SOURCE</span> <span class='op'>==</span> <span class='st'>"Marine Aquaculture"</span>,
+                                                                 <span class='st'>"SPECIES"</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>,decreasing <span class='op'>=</span> <span class='cn'>T</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>Marine_Aquaculture</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"Marine Aquaculture"</span><span class='op'>)</span>
+<span class='va'>Marine_Aquaculture</span>
+</code></pre>
+</div>
+<pre><code>  Marine Aquaculture Freq
+1    Humpback Salmon    1
+2      Silver Salmon    2
+3    Atlantic Salmon    8</code></pre>
+</div>
+<p>So based on the data above, not only top three species, but keta salmon is also cultivated</p>
+<h2 id="country-and-cultivation">3.4 Country and cultivation</h2>
+<p>which countries did cultivation? From Freshwater Aquaculture First</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>Country_Freshwater_Aquaculture</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/droplevels.html'>droplevels</a></span><span class='op'>(</span><span class='va'>salmon</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>SOURCE</span> <span class='op'>==</span> <span class='st'>"Freshwater Aquaculture"</span> , <span class='st'>"COUNTRY"</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>,decreasing <span class='op'>=</span> <span class='cn'>T</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>Country_Freshwater_Aquaculture</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"Freshwater Aquaculture"</span><span class='op'>)</span>
+<span class='va'>Country_Freshwater_Aquaculture</span>
+</code></pre>
+</div>
+<pre><code>  Freshwater Aquaculture Freq
+1                Denmark    1
+2                  Chile    2
+3     Russian Federation    2</code></pre>
+</div>
+<p>And then Marine Aquaculture</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>Country_Marine_Aquaculture</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/droplevels.html'>droplevels</a></span><span class='op'>(</span><span class='va'>salmon</span><span class='op'>[</span><span class='va'>salmon</span><span class='op'>$</span><span class='va'>SOURCE</span> <span class='op'>==</span> <span class='st'>"Marine Aquaculture"</span> , <span class='st'>"COUNTRY"</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>,decreasing <span class='op'>=</span> <span class='cn'>T</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>Country_Marine_Aquaculture</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"Marine Aquaculture"</span><span class='op'>)</span>
+<span class='va'>Country_Marine_Aquaculture</span>
+</code></pre>
+</div>
+<pre><code>        Marine Aquaculture Freq
+1                   France    1
+2                    Japan    1
+3                   Norway    1
+4           United Kingdom    1
+5 United States of America    1
+6                   Canada    2
+7                    Chile    2
+8       Russian Federation    2</code></pre>
+</div>
+<p>Only Chile and Russia did both cultivation, however how about the production results?</p>
+<p>Before that I need to aggregate</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>salmon_country_agg</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span><span class='op'>(</span><span class='va'>QUANTITY</span> <span class='op'>~</span> <span class='va'>COUNTRY</span> <span class='op'>+</span> <span class='va'>SOURCE</span> , <span class='va'>salmon</span> , <span class='va'>sum</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>fresh_aquaculture_country</span> <span class='op'>&lt;-</span> <span class='va'>salmon_country_agg</span><span class='op'>[</span> <span class='va'>salmon_country_agg</span><span class='op'>$</span><span class='va'>SOURCE</span> <span class='op'>==</span> <span class='st'>"Freshwater Aquaculture"</span>, <span class='op'>]</span>
+<span class='va'>fresh_aquaculture_country</span>
+</code></pre>
+</div>
+<pre><code>              COUNTRY                 SOURCE QUANTITY
+13              Chile Freshwater Aquaculture   683.38
+14            Denmark Freshwater Aquaculture  1030.00
+15 Russian Federation Freshwater Aquaculture     0.00</code></pre>
+</div>
+<p>I was surprised, it turned out that Russia did not produce Freshwater Aquaculture in 2018</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>marine_aquaculture_country</span> <span class='op'>&lt;-</span> <span class='va'>salmon_country_agg</span><span class='op'>[</span> <span class='va'>salmon_country_agg</span><span class='op'>$</span><span class='va'>SOURCE</span> <span class='op'>==</span> <span class='st'>"Marine Aquaculture"</span>, <span class='op'>]</span>
+<span class='va'>marine_aquaculture_country_sorted</span> <span class='op'>&lt;-</span> <span class='va'>marine_aquaculture_country</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='op'>-</span><span class='va'>marine_aquaculture_country</span><span class='op'>$</span><span class='va'>QUANTITY</span>, <span class='va'>marine_aquaculture_country</span><span class='op'>$</span><span class='va'>COUNTRY</span><span class='op'>)</span>,<span class='op'>]</span>
+<span class='va'>marine_aquaculture_country_sorted</span>
+</code></pre>
+</div>
+<pre><code>                    COUNTRY             SOURCE  QUANTITY
+20                   Norway Marine Aquaculture 1282003.2
+17                    Chile Marine Aquaculture  808975.8
+22           United Kingdom Marine Aquaculture  166000.0
+16                   Canada Marine Aquaculture  123184.0
+21       Russian Federation Marine Aquaculture   20632.0
+19                    Japan Marine Aquaculture   18000.0
+23 United States of America Marine Aquaculture   16107.0
+18                   France Marine Aquaculture     300.0</code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>graphics</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/r/graphics/barplot.html'>barplot</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/xtabs.html'>xtabs</a></span><span class='op'>(</span><span class='va'>QUANTITY</span> <span class='op'>~</span> <span class='va'>COUNTRY</span>,<span class='va'>marine_aquaculture_country_sorted</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="Wicked-Salmon_files/figure-html5/unnamed-chunk-29-1.png" width="624" /></p>
+</div>
+<p>as well known Norway definitely the highest of Salmon production in Marine Aquaculture</p>
+<h1 id="conclusion">4. Conclusion</h1>
+<p>So it is actually not easy to cultivate salmon, but the positive thing is that many technologies have been developed to cultivate salmon. Cultivation is also not always positive, the cons is that production costs are too expensive. My assumptions, an easy solution to keep the population of salmon still sustainable is to limit the catch by weight or by fishing season, and improve the technologies for Aquaculture to make the cost is cheaper. I think that is enough, thanks for reading my Rmd.</p>
+<h1 id="reference">5. Reference</h1>
+<p><a href="http://www.fao.org/fishery/statistics/global-production/en" class="uri">http://www.fao.org/fishery/statistics/global-production/en</a> <br> Cover photo by <a href="https://unsplash.com/@tiomp?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Marcos Paulo Prado</a> on <a href="https://unsplash.com/s/photos/salmon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> <br> This article also available on <a href="https://medium.com/fajardwnugroho/wicked-salmon-1e6d064bd7cb">Medium</a> and <a href="https://rpubs.com/fajardwnugroho/wickedsalmon">Rpubs</a></p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>

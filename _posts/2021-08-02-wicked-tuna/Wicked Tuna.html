@@ -1,0 +1,280 @@
+---
+title: "Wicked Tuna"
+author: "Fajar Dwi Nugroho"
+date: 2021-06-20T21:13:14-05:00
+categories: ["Python", "Kaggle"]
+tags: ["Markdown", "Clasification", "Prediction"]
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/plotly-binding/plotly.js"></script>
+<script src="/rmarkdown-libs/typedarray/typedarray.min.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
+<link href="/rmarkdown-libs/plotly-htmlwidgets-css/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/plotly-main/plotly-latest.min.js"></script>
+
+
+<p>Distill is a publication format for scientific and technical writing, native to the web.</p>
+<p>Learn more about using Distill at <a href="https://rstudio.github.io/distill" class="uri">https://rstudio.github.io/distill</a>.</p>
+<div id="intro" class="section level1 tabset">
+<h1>1. Intro</h1>
+<div id="greetings" class="section level2 tabset">
+<h2>1.1 Greetings</h2>
+<p>Helo, Welcome to My Rmd In this Rmd I would explore about Tuna</p>
+</div>
+<div id="brief" class="section level2 tabset">
+<h2>1.2 Brief</h2>
+<p>I want to visualize some graphs to inform a Tuna condition</p>
+</div>
+<div id="problem-background" class="section level2 tabset">
+<h2>1.3 Problem Background</h2>
+<p>Atlantic Bluefin Tuna now is endangered because overexploited, I want to find out current condition.
+1.
+Which species are the most exploited?
+2.
+Which countries exploit the most?
+3.
+What is the solution to the current condition?</p>
+</div>
+<div id="library" class="section level2 tabset">
+<h2>1.4 Library</h2>
+<pre class="r"><code>library(tidyverse)
+library(readr)
+library(ggthemes)
+library(plotly)</code></pre>
+</div>
+<div id="dataset" class="section level2 tabset">
+<h2>1.5 Dataset</h2>
+<p>Dataset is from FAO Fisheries Division <br> “FAO Aquaculture, Capture and Global production databases with data from 1950 to 2018”</p>
+<pre class="r"><code>country &lt;- read_csv(&quot;input_fish/CL_FI_COUNTRY_GROUPS.csv&quot;)
+production &lt;- read_csv(&quot;input_fish/CL_FI_PRODUCTION_SOURCE.csv&quot;)
+species &lt;- read_csv(&quot;input_fish/CL_FI_SPECIES_GROUPS.csv&quot;)
+symbol &lt;- read_csv(&quot;input_fish/CL_FI_SYMBOL.csv&quot;)
+unit &lt;- read_csv(&quot;input_fish/CL_FI_UNIT.csv&quot;)
+waterarea &lt;- read_csv(&quot;input_fish/CL_FI_WATERAREA_GROUPS.csv&quot;)
+TS &lt;- read_csv(&quot;input_fish/TS_FI_PRODUCTION.csv&quot;)</code></pre>
+</div>
+</div>
+<div id="data-wrangling" class="section level1">
+<h1>2. Data Wrangling</h1>
+<div id="filter-the-species" class="section level2">
+<h2>2.1 Filter the Species</h2>
+<p>I looking for the names of colomn</p>
+<pre class="r"><code>names(species) #Check colomn names</code></pre>
+<pre><code>##  [1] &quot;3Alpha_Code&quot;     &quot;Taxonomic_Code&quot;  &quot;Identifier&quot;      &quot;Name_En&quot;        
+##  [5] &quot;Name_Fr&quot;         &quot;Name_Es&quot;         &quot;Name_Ar&quot;         &quot;Name_Cn&quot;        
+##  [9] &quot;Name_Ru&quot;         &quot;Scientific_Name&quot; &quot;Author&quot;          &quot;Family&quot;         
+## [13] &quot;Order&quot;           &quot;Major_Group&quot;     &quot;Yearbook_Group&quot;  &quot;ISSCAAP_Group&quot;  
+## [17] &quot;CPC_Class&quot;       &quot;CPC_Group&quot;</code></pre>
+<p>I use three colomn ‘3Alpha_Code’, Name_En and Scientific_Name to extract the code</p>
+<pre class="r"><code>Nama_Tuna &lt;- species %&gt;% 
+  select(&#39;3Alpha_Code&#39;, Name_En, Scientific_Name) %&gt;% 
+  filter(Name_En %in% c(&quot;Atlantic bluefin tuna&quot;, &quot;Southern bluefin tuna&quot;, &quot;Pacific bluefin tuna&quot;, &quot;Bigeye tuna&quot;, &quot;Albacore&quot;, &quot;Longtail tuna&quot;, &quot;Blackfin tuna&quot;, &quot;Yellowfin tuna&quot;)) #Filtering species</code></pre>
+<hr />
+<div id="species" class="section level3">
+<h3>Species</h3>
+<pre class="r"><code>Nama_Tuna</code></pre>
+<pre><code>## # A tibble: 8 x 3
+##   `3Alpha_Code` Name_En               Scientific_Name   
+##   &lt;chr&gt;         &lt;chr&gt;                 &lt;chr&gt;             
+## 1 BFT           Atlantic bluefin tuna Thunnus thynnus   
+## 2 PBF           Pacific bluefin tuna  Thunnus orientalis
+## 3 LOT           Longtail tuna         Thunnus tonggol   
+## 4 BLF           Blackfin tuna         Thunnus atlanticus
+## 5 ALB           Albacore              Thunnus alalunga  
+## 6 SBF           Southern bluefin tuna Thunnus maccoyii  
+## 7 YFT           Yellowfin tuna        Thunnus albacares 
+## 8 BET           Bigeye tuna           Thunnus obesus</code></pre>
+<p>The code has been extracted, next replace the code with species names</p>
+<hr />
+</div>
+<div id="decode---encode" class="section level3">
+<h3>Decode - Encode</h3>
+<p>I use Time Series dataset from 1950 to 2018</p>
+<pre class="r"><code>TUNA &lt;- TS %&gt;% 
+  filter(SPECIES %in% c(&quot;BFT&quot;, 
+                        &quot;PBF&quot;, 
+                        &quot;LOT&quot;, 
+                        &quot;BLF&quot;, 
+                        &quot;ALB&quot;, 
+                        &quot;SBF&quot;, 
+                        &quot;YFT&quot;, 
+                        &quot;BET&quot;),
+         YEAR %in% 1950:2018)</code></pre>
+<hr />
+</div>
+<div id="replacing" class="section level3">
+<h3>Replacing</h3>
+<p>I using sapply function for this step</p>
+<pre class="r"><code>TUNA$SPECIES &lt;- sapply(as.character(TUNA$SPECIES), switch, 
+                       &quot;BFT&quot; = &quot;Atlantic Bluefin Tuna&quot;,
+                       &quot;PBF&quot; = &quot;Pacific Bluefin Tuna&quot;, 
+                       &quot;LOT&quot; = &quot;Longtail Tuna&quot;, 
+                       &quot;BLF&quot; = &quot;Blackfin Tuna&quot;, 
+                       &quot;ALB&quot; = &quot;Albacore&quot;,
+                       &quot;SBF&quot; = &quot;Southern Bluefin Tuna&quot;, 
+                       &quot;YFT&quot; = &quot;Yellowfin Tuna&quot;,
+                       &quot;BET&quot; = &quot;Bigeye Tuna&quot;)</code></pre>
+</div>
+</div>
+<div id="the-country" class="section level2">
+<h2>2.2 The Country</h2>
+<p>Now, country who harvesting Tuna. There are 21 top country I got from FAO and then I filtering from country dataset</p>
+<pre class="r"><code>topFAO &lt;- country %&gt;% 
+  filter(Name_En %in% c(&quot;Thailand&quot;, &quot;Spain&quot;, &quot;Ecuador&quot;, &quot;Taiwan Province of China&quot;, &quot;China&quot;, &quot;Indonesia&quot;, &quot;Korea, Republic of&quot;, &quot;Viet Nam&quot;, &quot;Philippines&quot;, &quot;Netherlands&quot;, &quot;Mauritius&quot;, &quot;Japan&quot;, &quot;United States of America&quot;, &quot;Italy&quot;, &quot;France&quot;, &quot;Germany&quot;, &quot;United Kingdom&quot;, &quot;Australia&quot;, &quot;Canada&quot;, &quot;Portugal&quot;, &quot;Saudi Arabia&quot;)) %&gt;% 
+  select(UN_Code, Name_En)</code></pre>
+<p>OK, I got the code of country</p>
+<hr />
+<div id="filter-code-of-country" class="section level3">
+<h3>Filter Code of Country</h3>
+<pre class="r"><code>TUNA &lt;- TUNA %&gt;% 
+  filter(COUNTRY %in% c(&quot;036&quot;, &quot;124&quot;, &quot;156&quot;, &quot;158&quot;, &quot;218&quot;, &quot;250&quot;, &quot;276&quot;, &quot;360&quot;, &quot;380&quot;, &quot;392&quot;, &quot;410&quot;, &quot;480&quot;, &quot;528&quot;, &quot;608&quot;, &quot;620&quot;, &quot;682&quot;, &quot;704&quot;, &quot;724&quot;, &quot;764&quot;, &quot;826&quot;, &quot;840&quot;))</code></pre>
+<p>After that I do the same things like before on Species</p>
+</div>
+</div>
+<div id="decode---encode-1" class="section level2 smaller">
+<h2>Decode - Encode</h2>
+<pre class="r"><code>TUNA$COUNTRY &lt;- sapply(as.character(TUNA$COUNTRY), switch, 
+                            &quot;036&quot; = &quot;Australia&quot;,
+                            &quot;124&quot; = &quot;Canada&quot;, 
+                            &quot;156&quot; = &quot;China&quot;, 
+                            &quot;158&quot; = &quot;Taiwan Province of China&quot;, 
+                            &quot;218&quot; = &quot;Ecuador&quot;,
+                            &quot;250&quot; = &quot;France&quot;, 
+                            &quot;276&quot; = &quot;Germany&quot;,
+                            &quot;360&quot; = &quot;Indonesia&quot;,
+                            &quot;380&quot; = &quot;Italy&quot;,
+                            &quot;392&quot; = &quot;Japan&quot;, 
+                            &quot;410&quot; = &quot;Korea, Republic of&quot;, 
+                            &quot;480&quot; = &quot;Mauritius&quot;, 
+                            &quot;528&quot; = &quot;Netherlands&quot;,
+                            &quot;608&quot; = &quot;Philippines&quot;, 
+                            &quot;620&quot; = &quot;Portugal&quot;,
+                            &quot;682&quot; = &quot;Saudi Arabia&quot;,
+                            &quot;704&quot; = &quot;Viet Nam&quot;,
+                            &quot;724&quot; = &quot;Spain&quot;, 
+                            &quot;764&quot; = &quot;Thailand&quot;, 
+                            &quot;826&quot; = &quot;United Kingdom&quot;, 
+                            &quot;840&quot; = &quot;United States of America&quot;)</code></pre>
+</div>
+<div id="fishing-ground" class="section level2 smaller">
+<h2>2.3 Fishing Ground</h2>
+<p>Now, where the fish is capturing. The Fishing ground</p>
+<pre class="r"><code>fishing_ground &lt;- waterarea %&gt;% 
+  filter(Code %in% c(&quot;77&quot;, &quot;87&quot;, &quot;21&quot;, &quot;67&quot;, &quot;61&quot;, &quot;71&quot;, &quot;27&quot;, &quot;31&quot;, &quot;51&quot;, &quot;57&quot;, &quot;81&quot;, &quot;34&quot;, &quot;37&quot;, &quot;47&quot;, &quot;41&quot;)) %&gt;% 
+  select(Code, Name_en)</code></pre>
+<pre class="r"><code>TUNA$AREA &lt;- sapply(as.character(TUNA$AREA), switch,
+                    &quot;77&quot; = &quot;Pacific, Eastern Central&quot;,
+                    &quot;87&quot; = &quot;Pacific, Southeast&quot;,
+                    &quot;21&quot; = &quot;Atlantic, Northwest&quot;,
+                    &quot;67&quot; = &quot;Pacific, Northeast&quot;,
+                    &quot;61&quot; = &quot;Pacific, Northwest&quot;,
+                    &quot;71&quot; = &quot;Pacific, Western Central&quot;,
+                    &quot;27&quot; = &quot;Atlantic, Northeast&quot;,
+                    &quot;31&quot; = &quot;Atlantic, Western Central&quot;,
+                    &quot;51&quot; = &quot;Indian Ocean, Western&quot;, 
+                    &quot;57&quot; = &quot;Indian Ocean, Eastern&quot;,
+                    &quot;81&quot; = &quot;Pacific, Southwest&quot;,
+                    &quot;34&quot; = &quot;Atlantic, Eastern Central&quot;,
+                    &quot;37&quot; = &quot;Mediterranean and Black Sea&quot;,
+                    &quot;47&quot; = &quot;Atlantic, Southeast&quot;,
+                    &quot;41&quot; = &quot;Atlantic, Southwest&quot;)</code></pre>
+</div>
+<div id="source" class="section level2">
+<h2>2.4 Source</h2>
+<p>Another to hervesting the Tuna is from Marine Aquaculture</p>
+<pre class="r"><code>TUNA$SOURCE &lt;- sapply(as.character(TUNA$SOURCE), switch,
+                      &quot;3&quot; = &quot;Marine Aquaculture&quot;,
+                      &quot;4&quot; = &quot;Capture Fisheries&quot;)</code></pre>
+</div>
+<div id="sub-genus" class="section level2">
+<h2>2.5 Sub-Genus</h2>
+<p>In this step I did a little future enginering, create a new colomn ._.</p>
+<pre class="r"><code>Thunnus &lt;- Thunnus %&gt;% 
+  mutate(FIN = SPECIES)</code></pre>
+<p>Next, species grouping by their sub-genus</p>
+<pre class="r"><code>Thunnus$FIN &lt;- sapply(as.character(Thunnus$FIN), switch, 
+                      &quot;Atlantic Bluefin Tuna&quot; = &quot;Bluefin&quot;,
+                      &quot;Pacific Bluefin Tuna&quot; = &quot;Bluefin&quot;, 
+                      &quot;Longtail Tuna&quot; = &quot;Yellowfin&quot;, 
+                      &quot;Blackfin Tuna&quot; =&quot;Yellowfin&quot;, 
+                      &quot;Albacore&quot; = &quot;Bluefin&quot;,
+                      &quot;Southern Bluefin Tuna&quot; = &quot;Bluefin&quot;, 
+                      &quot;Yellowfin Tuna&quot; = &quot;Yellowfin&quot;,
+                      &quot;Bigeye Tuna&quot; = &quot;Bluefin&quot;)</code></pre>
+</div>
+</div>
+<div id="eda-exploratory-data-analysis" class="section level1">
+<h1>3 EDA | Exploratory Data Analysis</h1>
+<div id="total-catch-by-fishing-ground" class="section level2">
+<h2>3.1 Total Catch by Fishing Ground</h2>
+<p><img src="/post/2021-04-29-wickedtuna/wickedtuna_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p>Pacific, Southeast is the closest ocean to Indonesia, it could be that Indonesian fishermen catch tuna at this fishing ground. The species most frequently capture is Yellowfin Tuna, which is NT IUCN status or near threatened. However, if they are almost threatened, then are they the most worthy of exploitation?</p>
+</div>
+<div id="total-yearly-catch-by-sub-genus" class="section level2">
+<h2>3.2 Total Yearly Catch by Sub-Genus</h2>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"visdat":{"1dcc1365996a":["function () ","plotlyVisDat"]},"cur_data":"1dcc1365996a","attrs":{"1dcc1365996a":{"labels":{},"values":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"pie"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"labels":["Bluefin","Yellowfin"],"values":[538374,846409],"type":"pie","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(255,255,255,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="total-yearly-catch-by-species" class="section level2">
+<h2>3.3 Total Yearly Catch by Species</h2>
+<div id="htmlwidget-2" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"visdat":{"1dcc28909ac2":["function () ","plotlyVisDat"]},"cur_data":"1dcc28909ac2","attrs":{"1dcc28909ac2":{"labels":{},"values":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"pie"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"labels":["Albacore","Atlantic Bluefin Tuna","Bigeye Tuna","Blackfin Tuna","Longtail Tuna","Pacific Bluefin Tuna","Southern Bluefin Tuna","Yellowfin Tuna"],"values":[181951,19947,304332,6,83710,24798,7346,762693],"type":"pie","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(255,255,255,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="total-yearly-catch-by-country" class="section level2">
+<h2>3.4 Total Yearly Catch by Country</h2>
+<p><img src="/post/2021-04-29-wickedtuna/wickedtuna_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+</div>
+<div id="time-series" class="section level2">
+<h2>3.5 Time Series</h2>
+<div id="blue-fin-x-yellow-fin-1950---2018" class="section level3">
+<h3>Blue Fin X Yellow Fin (1950 - 2018)</h3>
+<p><img src="/post/2021-04-29-wickedtuna/wickedtuna_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+</div>
+</div>
+<div id="trend" class="section level2">
+<h2>3.6 Trend</h2>
+<div id="sub-genus-yellowfin-tuna" class="section level3">
+<h3>Sub-Genus Yellowfin Tuna</h3>
+<p><img src="/post/2021-04-29-wickedtuna/wickedtuna_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+</div>
+<div id="sub-genus-bluefin-tuna" class="section level3">
+<h3>Sub-Genus Bluefin Tuna</h3>
+<p><img src="/post/2021-04-29-wickedtuna/wickedtuna_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+</div>
+</div>
+<div id="capture-vs-culture" class="section level2">
+<h2>3.7 Capture vs Culture</h2>
+<div id="htmlwidget-3" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"visdat":{"1dcc362fe987":["function () ","plotlyVisDat"]},"cur_data":"1dcc362fe987","attrs":{"1dcc362fe987":{"labels":{},"values":{},"title":"Total Catch by Source in 2018","textinfo":"none","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"pie"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"labels":["Capture Fisheries","Marine Aquaculture"],"values":[1365673,19110],"title":"Total Catch by Source in 2018","textinfo":"none","type":"pie","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(255,255,255,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="the-rising-of-marine-aquaculture" class="section level2">
+<h2>3.8 The Rising of Marine Aquaculture</h2>
+<p><img src="/post/2021-04-29-wickedtuna/wickedtuna_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+</div>
+</div>
+<div id="solution" class="section level1">
+<h1>4. Solution</h1>
+<div id="marine-aquaculture" class="section level2">
+<h2>Marine Aquaculture</h2>
+<p><img src="input_fish/RedList.png" width="100%" /></p>
+<pre><code>## [1] &quot;input_fish/RedList.png&quot;</code></pre>
+<div class="figure">
+<img src="input_fish/RedList.png" alt="" />
+<p class="caption">tuna</p>
+</div>
+<p>!(input_fish/RedList.png)</p>
+<div class="figure"><span id="fig:unnamed-chunk-29"></span>
+<img src="input_fish/RedList.png" alt="A nice image." width="50%" />
+<p class="caption">
+Figure 1: A nice image.
+</p>
+</div>
+</div>
+</div>
+<div id="reference" class="section level1">
+<h1>5. Reference</h1>
+</div>

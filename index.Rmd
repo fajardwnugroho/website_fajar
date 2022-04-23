@@ -1,0 +1,22 @@
+---
+title: ""
+image: "data/images/foto-profile2.jpeg"
+links:
+  - label: '<i class="fab fa-telegram fa-3x"></i>'
+    url: "https://t.me/fajardwnugroho"
+  - label: '<i class="far fa-envelope fa-3x"></i>'
+    url: "mailto:fajardwnugroho@gmail.com"
+  - label: '<i class="fab fa-linkedin-in fa-3x"></i>'
+    url: "https://www.linkedin.com/in/fajardwnugroho/"
+  # - label: '<i class="fab fa-twitter fa-3x"></i>'
+  #   url: "https://twitter.com/fajardwnugroho"
+    
+output: postcards::jolla
+  
+site: distill::distill_website
+---
+
+-   I'm Fajar Nugroho, a data science enthusiast who falling in ❤️ with <a href = "https://www.r-project.org/">R</a> and <a href = "https://www.python.org/">Python</a> 🐍
+-   I write some stuff about data science on <a href = "journal.html">here</a> 📊
+-   If you want to find out more deep about me, just simply click <a href = "about.html">here</a> 🙋
+-   Or reach out me using the links below 📩

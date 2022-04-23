@@ -1,0 +1,345 @@
+---
+title: "Wicked Salmon"
+description: |
+  Decreasing of salmon population in wild habitat are cause by over fishing and developed on the river stream such as a dam. Because salmons are Anadromous they are swiming against the river flow from the ocean and back to the freshwater for spawning. 
+author:
+  - name: Fajar Nugroho
+    url: https://fajardwnugroho.com/
+date: 01-09-2022
+output:
+  distill::distill_article:
+    toc: true
+    toc_float: true
+    collapsed: true
+    smooth_scroll: true
+    self_contained: false
+    toc_depth: 2
+    css: "style.css"
+categories:
+  - R
+  - Data Analysis
+  - Fisheries
+preview: images/marcos-paulo-prado-B1ZnmSB7htg-unsplash.jpg
+draft: false
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 1. Intro {.tabset}
+
+## 1.1 Greetings {.tabset}
+
+Helo, Welcome to My Rmd In this Rmd I would explore a little bit about salmon.
+
+## 1.2 Brief {.tabset}
+
+
+Data source is from FAO. There are a lot of species, however Im only need a commercial salmon species. I wont to know about the source, which country? and what the metodologi used to harvest salmon?
+
+
+## 1.3 Problem Background {.tabset}
+
+
+Decreasing of salmon population in wild habitat are cause by over fishing and developed on the river stream such as a dam. Because salmons are Anadromous they are swiming against the river flow from the ocean and back to the freshwater for spawning.
+
+
+## 1.4 Library {.tabset}
+
+```{r, echo=TRUE}
+library(readr)
+library(readxl)
+```
+
+## 1.5 Dataset {.tabset}
+
+```{r, warning=FALSE, message=FALSE}
+fish <- read_csv("input_fish/TS_FI_PRODUCTION.csv")
+species <- read_csv("input_fish/CL_FI_SPECIES_GROUPS.csv")
+country <- read_csv("input_fish/CL_FI_COUNTRY_GROUPS.csv")
+source <- read_csv("input_fish/CL_FI_PRODUCTION_SOURCE.csv")
+note <- read_xlsx("input_fish/DSD_FI_PRODUCTION.xlsx")
+```
+
+# 2. Data Preparation
+
+## 2.1 Subset Columns & Rows
+
+I only chose 7 species of salmon and for column I chose Country, Source, Species, Year, and Quantity
+
+```{r}
+salmon <- fish[ fish$SPECIES %in% c("SAL", "CHI", "CHU", "COH", "CHE", "PIN", "SOC") , 
+                                  c("COUNTRY", "SOURCE", "SPECIES", "YEAR", "QUANTITY")]
+```
+
+and then assign to the salmon data frame
+
+## 2.2 Check the Data
+
+### 2.2.1 Check structure data
+
+```{r}
+str(salmon)
+```
+
+### 2.2.2 Cek Missing data
+
+```{r}
+colSums(is.na(salmon))
+```
+
+There is no missing data in salmon data frame
+
+## 2.3 Convert Data
+
+### 2.3.1 Convert country code to country name
+
+Check country code
+
+```{r}
+unique(salmon$COUNTRY)
+```
+
+Interpret county code
+
+```{r}
+negara <- country [ country$UN_Code %in% c("643", "410", "666", "840", "724", 
+                                           "810", "752", "124", "152", "208", 
+                                           "233", "234", "250", "246", "276", 
+                                           "304", "352", "372", "833", "392", 
+                                           "428", "440", "528", "554", "578", 
+                                           "616", "620", "826", "300", "408", 
+                                           "196",  "36", "792", "376", "100") , ]
+negara$Name_En
+```
+
+There are 34 countries in salmon data frame, however according to the FAO there are only 14 countries that contribute to the global salmon trade, So I just convert 14 countries to the salmon data frame.
+
+```{r, warning=FALSE}
+salmon$COUNTRY[salmon$COUNTRY=="578"]<-"Norway"
+salmon$COUNTRY[salmon$COUNTRY=="152"]<-"Chile"
+salmon$COUNTRY[salmon$COUNTRY=="752"]<-"Sweden"
+salmon$COUNTRY[salmon$COUNTRY=="208"]<-"Denmark"
+salmon$COUNTRY[salmon$COUNTRY=="616"]<-"Poland"
+salmon$COUNTRY[salmon$COUNTRY=="826"]<-"United Kingdom"
+salmon$COUNTRY[salmon$COUNTRY=="840"]<-"United States of America"
+salmon$COUNTRY[salmon$COUNTRY=="124"]<-"Canada"
+salmon$COUNTRY[salmon$COUNTRY=="250"]<-"France"
+salmon$COUNTRY[salmon$COUNTRY=="276"]<-"Germany"
+salmon$COUNTRY[salmon$COUNTRY=="528"]<-"Netherlands"
+salmon$COUNTRY[salmon$COUNTRY=="392"]<-"Japan"
+salmon$COUNTRY[salmon$COUNTRY=="724"]<-"Spain"
+salmon$COUNTRY[salmon$COUNTRY=="643"]<-"Russian Federation"
+
+
+unique(salmon$COUNTRY)
+```
+
+Subset 14 countires
+
+```{r}
+salmon <- salmon[ salmon$COUNTRY %in% c("Norway", "Chile", "Sweden", "Denmark", "Poland", 
+                                        "United Kingdom", "United States of America", "Canada", 
+                                        "France", "Germany", "Netherlands", "Japan", "Spain", 
+                                        "Russian Federation") , ]
+
+unique(salmon$COUNTRY)
+```
+
+### 2.3.2 Convert code of source to source name
+
+Interpret code of source
+
+```{r}
+source
+```
+
+Check code of source on salmon data frame
+
+```{r}
+unique(salmon$SOURCE)
+```
+
+There are only 3 of 5 source in the salmon data frame So now convert the code to the name
+
+```{r}
+salmon$SOURCE[salmon$SOURCE=="1"]<-"Freshwater Aquaculture"
+salmon$SOURCE[salmon$SOURCE=="3"]<-"Marine Aquaculture"
+salmon$SOURCE[salmon$SOURCE=="4"]<-"Capture Fishery"
+
+unique(salmon$SOURCE)
+```
+
+### 2.3.3 Convert species code to species name in english
+
+Interpret species code
+
+```{r}
+Spesies <- species[ species$"3Alpha_Code" %in% c("SAL", "CHI", "CHU", "COH", "CHE", "PIN", "SOC") , ]
+```
+
+convert the code to spacies name
+
+```{r}
+salmon$SPECIES[salmon$SPECIES=="SAL"]<-"Atlantic Salmon"
+salmon$SPECIES[salmon$SPECIES=="PIN"]<-"Humpback Salmon"
+salmon$SPECIES[salmon$SPECIES=="CHU"]<-"Keta Salmon"
+salmon$SPECIES[salmon$SPECIES=="CHE"]<-"Cherry Salmon"
+salmon$SPECIES[salmon$SPECIES=="SOC"]<-"Red Salmon"
+salmon$SPECIES[salmon$SPECIES=="CHI"]<-"King Salmon"
+salmon$SPECIES[salmon$SPECIES=="COH"]<-"Silver Salmon"
+
+unique(salmon$SPECIES)
+```
+
+### 2.3.4 Character to factor
+
+```{r}
+salmon$COUNTRY <- as.factor(salmon$COUNTRY)
+salmon$SOURCE <- as.factor(salmon$SOURCE)
+salmon$SPECIES <- as.factor(salmon$SPECIES)
+salmon$YEAR <- as.factor(salmon$YEAR)
+```
+
+Im just need year at 2018 so, i subset it
+
+```{r}
+salmon <- salmon[ salmon$YEAR == 2018, ]
+salmon <- salmon[ , c("COUNTRY", "SOURCE", "SPECIES", "QUANTITY")]
+```
+
+Now the data is ready to explore
+
+# 3 Data Exploratory and Explanatory
+
+## 3.1 Most popular species
+
+```{r}
+salmon_species <- as.data.frame(sort(prop.table(table(droplevels(salmon[ , "SPECIES" ]))), 
+                                     decreasing = T))
+names(salmon_species)[1] <- paste("Salmon Species")
+head(salmon_species, 3)
+```
+
+Ok this is the top 3 of the most popular salmon
+
+I try to make a pie chart
+
+```{r}
+graphics::pie(xtabs(~ SPECIES, salmon))
+```
+
+## 3.2 Where they came from
+
+First, Atlantic Salmon
+
+```{r}
+Atlantic_Salmon_Source <- as.data.frame(sort(prop.table(table(droplevels(salmon[salmon$SPECIES == "Atlantic Salmon","SOURCE"]))),decreasing = T))
+names(Atlantic_Salmon_Source)[1] <- paste("Atlantic Salmon")
+Atlantic_Salmon_Source
+```
+
+So capture fisheries practice is still being carried out, even though this species is already under threat
+
+Second, Humpback Salmon
+
+```{r}
+Humpback_Salmon_Source <- as.data.frame(sort(prop.table(table(droplevels(salmon[salmon$SPECIES == "Humpback Salmon","SOURCE"]))),decreasing = T))
+names(Humpback_Salmon_Source)[1] <- paste("Humpback Salmon")
+Humpback_Salmon_Source
+```
+
+Third, Silver Salmon
+
+```{r}
+Silver_Salmon_Source <- as.data.frame(sort(prop.table(table(droplevels(salmon[salmon$SPECIES == "Silver Salmon","SOURCE"]))),decreasing = T))
+names(Silver_Salmon_Source)[1] <- paste("Silver  Salmon")
+Silver_Salmon_Source
+```
+
+From three species above, the conclusion is capture fisheries still dominate the output of production.
+
+## 3.3 Aquaculture
+
+I am curious, what species are cultivated?
+Start from Freshwater Aquaculture
+
+```{r}
+Freshwater_Aquaculture <- as.data.frame(sort(table(droplevels(salmon[salmon$SOURCE == "Freshwater Aquaculture",
+                                                                     "SPECIES"]))),decreasing = T)
+names(Freshwater_Aquaculture)[1] <- paste("Freshwater Aquaculture")
+Freshwater_Aquaculture
+```
+
+Ok now from Marine Aquaculture
+
+```{r}
+Marine_Aquaculture <- as.data.frame(sort(table(droplevels(salmon[salmon$SOURCE == "Marine Aquaculture",
+                                                                 "SPECIES"]))),decreasing = T)
+names(Marine_Aquaculture)[1] <- paste("Marine Aquaculture")
+Marine_Aquaculture
+```
+
+So based on the data above, not only top three species, but keta salmon is also cultivated
+
+## 3.4 Country and cultivation
+
+which countries did cultivation?
+From Freshwater Aquaculture First
+
+```{r}
+Country_Freshwater_Aquaculture <- as.data.frame(sort(table(droplevels(salmon[salmon$SOURCE == "Freshwater Aquaculture" , "COUNTRY"]))),decreasing = T)
+names(Country_Freshwater_Aquaculture)[1] <- paste("Freshwater Aquaculture")
+Country_Freshwater_Aquaculture
+```
+
+And then Marine Aquaculture
+
+```{r}
+Country_Marine_Aquaculture <- as.data.frame(sort(table(droplevels(salmon[salmon$SOURCE == "Marine Aquaculture" , "COUNTRY"]))),decreasing = T)
+names(Country_Marine_Aquaculture)[1] <- paste("Marine Aquaculture")
+Country_Marine_Aquaculture
+```
+
+Only Chile and Russia did both cultivation, however how about the production results?
+
+Before that I need to aggregate
+
+```{r}
+salmon_country_agg <- aggregate(QUANTITY ~ COUNTRY + SOURCE , salmon , sum)
+```
+
+```{r}
+fresh_aquaculture_country <- salmon_country_agg[ salmon_country_agg$SOURCE == "Freshwater Aquaculture", ]
+fresh_aquaculture_country
+```
+
+I was surprised, it turned out that Russia did not produce Freshwater Aquaculture in 2018
+
+```{r}
+marine_aquaculture_country <- salmon_country_agg[ salmon_country_agg$SOURCE == "Marine Aquaculture", ]
+marine_aquaculture_country_sorted <- marine_aquaculture_country[order(-marine_aquaculture_country$QUANTITY, marine_aquaculture_country$COUNTRY),]
+marine_aquaculture_country_sorted
+```
+
+```{r}
+graphics::barplot(xtabs(QUANTITY ~ COUNTRY,marine_aquaculture_country_sorted))
+```
+
+as well known Norway definitely the highest of Salmon production in Marine Aquaculture
+
+# 4. Conclusion
+
+So it is actually not easy to cultivate salmon, but the positive thing is that many technologies have been developed to cultivate salmon.
+Cultivation is also not always positive, the cons is that production costs are too expensive.
+My assumptions, an easy solution to keep the population of salmon still sustainable is to limit the catch by weight or by fishing season, and improve the technologies for Aquaculture to make the cost is cheaper.
+I think that is enough, thanks for reading my Rmd.
+
+# 5. Reference
+
+<http://www.fao.org/fishery/statistics/global-production/en> <br>
+Cover photo by <a href="https://unsplash.com/@tiomp?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Marcos Paulo Prado</a> on <a href="https://unsplash.com/s/photos/salmon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> <br>
+This article also available on [Medium](https://medium.com/fajardwnugroho/wicked-salmon-1e6d064bd7cb) and [Rpubs](https://rpubs.com/fajardwnugroho/wickedsalmon)
