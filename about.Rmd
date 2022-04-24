@@ -3,7 +3,7 @@ title: "Henlo World"
 description: "Rstudio Addicted, Python Fansboy and Shiny Developer"
 ---
 
-Henlo! My name is Fajar Nugroho, thanks for visiting my site. I currently work as a Product Marketing Analyst at Rakamin Academy a Start Up Education Technology based in Jakarta, Indonesia. I enjoy using R and Python since I learn Data Science. <br>
+Henlo! My name is Fajar Nugroho, thanks for visiting my site. I currently work as a Product Marketing Analyst at Rakamin Academy a Start Up Education Technology based in Jakarta, Indonesia. I enjoy using R & Python since I learn Data Science. <br>
 Previously, I completed my Bachelor of Fisheries Science at [Universitas Gadjah Mada](https://www.ugm.ac.id/) in August 2018. I enjoy writing about things I'm working on and try to share some interesting things I discover on my blog.
 
 Feel free to get in touch if any of the posts catch your interest!
